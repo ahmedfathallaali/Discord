@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #5773ff, #334bff);
+    padding: 0 !important;
+}
+
+.navbar-brand p {
+    height: 60px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-brand span {
+    color: #7e03aa;
+    border: 3px solid #7e03aa;
+    border-radius: 50px;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.fa-bars {
+    color: #fff;
+    font-size: 30px !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+/* -------------banner Section----------- */
+#banner {
+    background-image: linear-gradient(to right, #5773ff, #334bff);
+    color: #fff;
+    padding-top: 5%;
+}
+
+.promo-title {
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 100px;
+}
+
+.text {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.btn {
+    --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #fff;
+    --color: #585858;
+    color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: .5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+    transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+}
+
+@keyframes move-bg7234 {
+    0% {
+        background-position: 31% 0%
+    }
+
+    50% {
+        background-position: 70% 100%
+    }
+
+    100% {
+        background-position: 31% 0%
+    }
+}
+
+.btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+            /* Top-left */
+            var(--border-width) calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+            /* Top-left */
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+
+            calc(100% - var(--border-width)) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+
+            /* bottom-right 2 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+    transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+    color: #fff;
+}
+
+#banner a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottm-img {
+    width: 100%;
+
+}
+
+/* -------------Server Section----------- */
+#programming {
+    padding: 80px 0;
+}
+
+.program-img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.program {
+    padding: 20px;
+}
+
+.program h4 {
+    padding: 5;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 27px;
+}
+
+.title::before {
+    content: '';
+    background: #334bff;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+}
+
+
+#program .btn-primary {
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #5773ff, #334bff);
+}
+/* -------------Footer----------- */
+#footer {
+    background-image: linear-gradient(to right, #5773ff, #334bff);
+    color: #fff;
+}
+hr {
+    background: #fff;
+}
+.copy-right {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
