@@ -233,6 +233,19 @@
     border-radius: 20px;
     background-image: linear-gradient(to right, #5773ff, #334bff);
 }
+.des {
+    font-weight: 800;
+}
+.img-dis {
+    width: 150px;
+}
+
+.img-down a img {
+    width: 170px;
+}
+.img-down a .app {
+    width: 165px;
+}
 /* -------------Footer----------- */
 #footer {
     background-image: linear-gradient(to right, #5773ff, #334bff);
